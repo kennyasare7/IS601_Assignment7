@@ -22,10 +22,6 @@ jobs:
           docker compose up -d --build
           docker compose ps
 
-      - name: Run QR code generator (example command)
-        run: |
-          docker compose exec -T qr_code_app python main.py --url https://github.com/kennyasare7/IS601_Assignment7
-
       - name: Stop and clean up
         if: always()
         run: docker compose down
